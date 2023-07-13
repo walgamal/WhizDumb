@@ -1,0 +1,57 @@
+.header-container {
+    height: 120px;
+    width: 100%;    
+    display: flex;
+    position: relative;
+    background-color: #0B0C10;
+}
+
+.site-logo-container {
+    display: flex;
+    position: absolute;
+    top: 50%; left: 15%;
+    transform: translate(-50%,-50%);
+    background-color: #0B0C10;
+}
+
+.site-logo {
+    height: 55px;
+    width: 55px;
+    background-color: #0B0C10;
+}
+
+.site-title {
+    font-family: 'Goldman','Arial','Sans-Serif';
+    color: #FFF;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 1.2;
+    background-color: #0B0C10;
+    margin-left: 10px;
+}
+
+.menu-container {
+    display: flex;
+    position: absolute;
+    top: 50%; right: 5%;
+    transform: translate(0%,-50%);
+    background-color: #0B0C10;
+}
+
+.hamburger-menu-icon {
+    height: 60px;
+    width: 60px;
+    background-color: #0B0C10;
+}
+
+.menu-title {
+    font-family: 'Goldman','Arial','Sans-Serif';
+    color: #FFF;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 1.2;
+    background-color: #0B0C10;
+    margin-right: 10px;
+}
