@@ -1,5 +1,5 @@
 import React from 'react'
-import '../ComponentsCSS/HomeFooter.css'
+import '../../ComponentsCSS/HomeComponentsCSS/HomeFooter.css'
 
 function HomeFooter() {
   return (

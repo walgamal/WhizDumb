@@ -1,6 +1,6 @@
-import HomeHero from './Components/HomeHero'
-import HomeHeader from './Components/HomeHeader'
-import HomeFooter from './Components/HomeFooter'
+import HomeHero from './Components/HomeComponents/HomeHero'
+import HomeHeader from './Components/HomeComponents/HomeHeader'
+import HomeFooter from './Components/HomeComponents/HomeFooter'
 
 function App() {
   return (

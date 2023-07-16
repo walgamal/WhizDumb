@@ -11,6 +11,8 @@ html, body {
     justify-content: center;
     align-items: center; 
     background: rgba(0, 0, 0, 0);
+    background-image: url("/assets/home-page-background.png");
+    background-size: cover;
 }
 
 .hero-card {
