@@ -2,9 +2,12 @@
     height: 13vh;
     width: 100%;    
     display: flex;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     background-color: #262B32;
+    background-image: url("/assets/misc-footer-background.png");
+    background-size: cover;
+    z-index: 10;
 }
 
 .misc-social-icons-container {
@@ -12,22 +15,25 @@
     position: absolute;
     top: 50%; left: 5%;
     transform: translate(0%,-50%);
-    background-color: #262B32;
+    background-color: #00000000;
 }
 
 .misc-insta-icon {
     height: 5vh;
     width: 55px;
+    background-color: #00000000;
 }
 
 .misc-twitter-icon {
     height: 5vh;
     width: 55px;
+    background-color: #00000000;
 }
 
 .misc-facebook-icon {
     height: 5vh;
     width: 55px;
+    background-color: #00000000;
 }
 
 .misc-menu-btns-container {
@@ -35,7 +41,7 @@
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%,-50%);
-    background-color: #262B32;
+    background-color: #00000000;
 }
 
 .misc-menu-btn {
@@ -47,6 +53,7 @@
     font-weight: 700;
     line-height: normal;
     color: #C5C6C7;
+    background-color: #00000000;
 }
 
 .misc-copyright-container {
@@ -54,7 +61,7 @@
     position: absolute;
     top: 50%; right: 5%;
     transform: translate(0%,-50%);
-    background-color: #262B32;
+    background-color: #00000000;
 }
 
 .misc-copyright-text {
@@ -65,4 +72,5 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    background-color: #00000000;
 }

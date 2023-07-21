@@ -1,21 +1,25 @@
 .misc-header-container {
     height: 13vh;
-    width: 100%;    
+    width: 100%;  
+    position: fixed;  
     background-color: #262B32;
+    background-image: url("/assets/misc-header-background.png");
+    background-size: cover;
+    z-index: 10;
 }
 
 .misc-site-logo-container {
     display: flex;
     position: absolute;
-    top: 6.5%; left: 50%;
+    top: 50%; left: 50%;
     transform: translate(-50%,-50%);
-    background-color: #262B32;
+    background-color: #00000000;
 }
 
 .misc-site-logo {
     height: 5.9vh;
     width: 55px;
-    background-color: #262B32;
+    background-color: #00000000;
 }
 
 .misc-site-title {
@@ -25,6 +29,6 @@
     font-style: normal;
     font-weight: 200;
     line-height: 1.2;
-    background-color: #262B32;
+    background-color: #00000000;
     margin-left: 10px;
 }
