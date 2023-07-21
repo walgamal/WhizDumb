@@ -1,0 +1,76 @@
+.misc-footer-container {
+    height: 13vh;
+    width: 100%;    
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    background-color: #262B32;
+    background-image: url("/assets/misc-footer-background.png");
+    background-size: cover;
+    z-index: 10;
+}
+
+.misc-social-icons-container {
+    display: flex;
+    position: absolute;
+    top: 50%; left: 5%;
+    transform: translate(0%,-50%);
+    background-color: #00000000;
+}
+
+.misc-insta-icon {
+    height: 5vh;
+    width: 55px;
+    background-color: #00000000;
+}
+
+.misc-twitter-icon {
+    height: 5vh;
+    width: 55px;
+    background-color: #00000000;
+}
+
+.misc-facebook-icon {
+    height: 5vh;
+    width: 55px;
+    background-color: #00000000;
+}
+
+.misc-menu-btns-container {
+    display: flex;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #00000000;
+}
+
+.misc-menu-btn {
+    margin-inline: 15px;
+    text-align: center;
+    font-family: 'Goldman','Arial','Sans-Serif';
+    font-size: 2.45vh;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: #C5C6C7;
+    background-color: #00000000;
+}
+
+.misc-copyright-container {
+    display: flex;
+    position: absolute;
+    top: 50%; right: 5%;
+    transform: translate(0%,-50%);
+    background-color: #00000000;
+}
+
+.misc-copyright-text {
+    color: #C5C6C7;
+    text-align: center;
+    font-family: 'Goldman','Arial','Sans-Serif';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    background-color: #00000000;
+}

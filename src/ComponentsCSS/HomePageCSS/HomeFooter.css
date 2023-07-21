@@ -18,16 +18,19 @@
 .insta-icon {
     height: 5vh;
     width: 55px;
+    background-color: #0B0C10;
 }
 
 .twitter-icon {
     height: 5vh;
     width: 55px;
+    background-color: #0B0C10;
 }
 
 .facebook-icon {
     height: 5vh;
     width: 55px;
+    background-color: #0B0C10;
 }
 
 .menu-btns-container {
@@ -39,7 +42,7 @@
 }
 
 .menu-btn {
-    margin-inline: 15px;
+    padding-inline: 15px;
     text-align: center;
     font-family: 'Goldman','Arial','Sans-Serif';
     font-size: 2.45vh;
@@ -47,6 +50,7 @@
     font-weight: 700;
     line-height: normal;
     color: #C5C6C7;
+    background-color: #0B0C10;
 }
 
 .copyright-container {
@@ -65,4 +69,5 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    background-color: #0B0C10;
 }
