@@ -1,0 +1,57 @@
+html, body { 
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.misc-hero {
+    height: 69.4%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background: #161A1D;
+    padding-block:13vh;
+    margin-bottom: 13vh;
+    overflow-y: auto;
+    z-index: 1;
+}
+
+.misc-card {
+    min-height: 85%;
+    width: 66%;
+    position: relative;
+    display: flex;
+    margin-block: 5%;
+    flex-direction: column;
+    border-radius: 36px;
+    border: 5px solid #0B0C10;
+    background: rgba(31, 40, 51, 0.80);
+    box-shadow: 5px 5px 8px 6px rgba(0, 0, 0, 0.50);
+    z-index: 2;
+}
+
+.misc-card-title {
+    height: 8%;
+    width: 100%;
+    text-align: center;
+    font-family: 'Goldman','Arial','Sans-Serif';
+    font-size: 4.5vh;
+    font-style: normal;
+    font-weight: 700;
+    margin-top: 3.3%;
+}
+
+.misc-card-p {
+    width: 95%;
+    margin-inline: auto;
+    margin-top: 1.8%;
+    margin-bottom: 3.5%;
+    color: #FFF;
+    text-align: center;
+    font-size: 3.2vh;
+    font-family: 'Goldman','Arial','Sans-Serif';
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
