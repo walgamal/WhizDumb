@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../ComponentsCSS/HomePageCSS/HomeFooter.css'
+import '../../ComponentsCSS/HomeComponentsCSS/HomeFooter.css'
 
 function HomeFooter() {
   return (
@@ -13,7 +13,7 @@ function HomeFooter() {
         <div className='menu-btns-container'>   
           <p><a className='menu-btn'>How to Play</a></p>
           <p><a className='menu-btn' href='/about' >About</a></p>
-          <p><a className='menu-btn' href='/contact'>Contact</a></p>    
+          <p><a className='menu-btn'>Contact</a></p>    
         </div>
         <div className='copyright-container'>
           <p className='copyright-text'>
