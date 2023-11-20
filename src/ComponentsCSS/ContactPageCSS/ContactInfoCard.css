@@ -1,0 +1,49 @@
+.contact-info-card {
+    min-height: 50%;
+    width: 26%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    margin-block: 20vh;
+    margin-left: 12vw;
+    padding-block: 3vh;
+    flex-direction: column;
+    border-radius: 36px;
+    border: 5px solid #0B0C10;
+    background: rgba(31, 40, 51, 0.80);
+    box-shadow: 5px 5px 8px 6px rgba(0, 0, 0, 0.50);
+    z-index: 2;
+}
+
+.contact-info-card-title {
+    height: 8%;
+    width: 100%;
+    text-align: center;
+    font-family: 'Goldman','Arial','Sans-Serif';
+    font-size: 4.5vh;
+    font-style: normal;
+    font-weight: 700;
+    margin-top: 3.3%;
+    background: rgba(0, 0, 0, 0);
+}
+
+.contact-info-card-divider {
+    width: 80%;
+    margin-top: 3vh;
+    margin-bottom: 1vh;
+    border: 2px solid #84848450; 
+}
+
+.contact-info-card-p {
+    width: 95%;
+    margin-inline: auto;
+    margin-block: 2.5vh;
+    color: #FFF;
+    text-align: center;
+    font-size: 3.2vh;
+    font-family: 'Goldman','Arial','Sans-Serif';
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    background: rgba(0, 0, 0, 0);
+}
