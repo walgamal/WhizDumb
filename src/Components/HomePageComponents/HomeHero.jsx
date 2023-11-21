@@ -1,4 +1,6 @@
 import React from 'react'
+import Button from '../MiscComponents/Button'
+import '../../ComponentsCSS/MiscCSS/Button.css'
 import '../../ComponentsCSS/HomePageCSS/HomeHero.css'
 
 function HomeHero() {
@@ -16,9 +18,7 @@ function HomeHero() {
                   ac. Viverra mauris in aliquam sem fringilla ut. Sed blandit libero volutpat sed cras ornare arcu dui.<br/> 
                   PUT INTRO HERE
               </p>
-              <button className='start-btn' type='button'>
-                Start
-              </button>
+              <Button className='start-btn btn' text='Start' />
           </div>
       </div>
     </>
