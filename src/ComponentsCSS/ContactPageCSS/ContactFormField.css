@@ -28,6 +28,7 @@
 .medium {
     height: 12vh;
     width: 31.2vw;
+    resize: none;
 }
 
 .left {

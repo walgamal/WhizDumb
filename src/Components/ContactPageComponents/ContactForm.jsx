@@ -10,14 +10,13 @@ function ContactForm() {
             Send Us a Message
         </h1>
         <hr className='contact-form-divider'/>
-        <br />
         <div className='contact-form-top-fields'>
-            <ContactFormField label='Name' size='small' location='left'/>
-            <ContactFormField label='Email' size='small' location='right'/>
+            <ContactFormField label='Name' size='small' location='left' multiline={false}/>
+            <ContactFormField label='Email' size='small' location='right' multiline={false}/>
         </div>
         <br />
         <div className='contact-form-bottom-field'>
-            <ContactFormField label='Message' size='medium'/>
+            <ContactFormField label='Message' size='medium' multiline={true}/>
         </div>
         <Button text='Submit' className='contact-form-btn'/>
     </div>
