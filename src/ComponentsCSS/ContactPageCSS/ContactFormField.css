@@ -1,0 +1,40 @@
+.contact-form-field-container {
+
+}
+
+.contact-form-field-label {
+    font-family: 'Goldman','Arial','Sans-Serif';
+    font-size: 2.3vh;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: 4px;
+}
+
+.contact-form-field {
+    padding: 4px;
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    border: 2.5px solid #000000;
+    border-radius: 5px;
+    background-color: #a9aaab50;
+}
+
+.small {
+    height: 3vh;
+    width: 14.5vw;
+}
+
+.medium {
+    height: 12vh;
+    width: 31.2vw;
+    resize: none;
+}
+
+.left {
+    margin-right: 10px;
+}
+
+.right {
+    margin-left: 10px;
+}

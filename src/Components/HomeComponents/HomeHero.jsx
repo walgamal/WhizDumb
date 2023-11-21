@@ -1,7 +1,5 @@
 import React from 'react'
-import Button from '../MiscComponents/Button'
-import '../../ComponentsCSS/MiscCSS/Button.css'
-import '../../ComponentsCSS/HomePageCSS/HomeHero.css'
+import '../../ComponentsCSS/HomeComponentsCSS/HomeHero.css'
 
 function HomeHero() {
   return (
@@ -18,7 +16,9 @@ function HomeHero() {
                   ac. Viverra mauris in aliquam sem fringilla ut. Sed blandit libero volutpat sed cras ornare arcu dui.<br/> 
                   PUT INTRO HERE
               </p>
-              <Button className='start-btn btn' text='Start' />
+              <button className='start-btn' type='button'>
+                Start
+              </button>
           </div>
       </div>
     </>

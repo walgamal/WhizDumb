@@ -2,6 +2,7 @@
     height: 13vh;
     width: 100%;  
     position: fixed;  
+    top: 0;
     background-color: #262B32;
     background-image: url("/assets/misc-header-background.png");
     background-size: cover;

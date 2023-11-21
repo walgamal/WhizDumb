@@ -1,22 +1,12 @@
-.misc-hero {
-    height: 69.4%;
-    width: 100%;
+.contact-form {
+    min-height: 50%;
+    width: 40%;
+    position: absolute;
     display: flex;
-    justify-content: center;
-    align-items: center; 
-    background: #161A1D;
-    padding-block:13vh;
-    margin-bottom: 13vh;
-    overflow-y: auto;
-    z-index: 1;
-}
-
-.misc-card {
-    min-height: 85%;
-    width: 66%;
-    position: relative;
-    display: flex;
-    margin-block: 5%;
+    align-items: center;
+    margin-block: 20vh;
+    margin-left: 48vw;
+    padding-block: 3vh;
     flex-direction: column;
     border-radius: 36px;
     border: 5px solid #0B0C10;
@@ -25,10 +15,11 @@
     z-index: 2;
 }
 
-.misc-card-title {
+.contact-form-title {
     height: 8%;
     width: 100%;
     text-align: center;
+    background: rgba(0, 0, 0, 0);
     font-family: 'Goldman','Arial','Sans-Serif';
     font-size: 4.5vh;
     font-style: normal;
@@ -36,11 +27,17 @@
     margin-top: 3.3%;
 }
 
-.misc-card-p {
+.contact-form-divider {
+    width: 80%;
+    margin-top: 2.1vh;
+    margin-bottom: 2.3vh;
+    border: 2px solid #84848450; 
+}
+
+.contact-form-p {
     width: 95%;
     margin-inline: auto;
-    margin-top: 1.8%;
-    margin-bottom: 3.5%;
+    margin-block: 2.5vh;
     color: #FFF;
     text-align: center;
     font-size: 3.2vh;
@@ -48,4 +45,9 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    background: rgba(0, 0, 0, 0);
+}
+
+.contact-form-top-fields {
+    display: flex;
 }
