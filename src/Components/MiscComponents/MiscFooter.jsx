@@ -11,9 +11,9 @@ function MiscFooter() {
         </div>
         {/* TODO: Hide buttons for phone/tablets */}
         <div className='misc-menu-btns-container'>   
-          <p><a className='misc-menu-btn'>How to Play</a></p>
+          <p><a className='misc-menu-btn' href='/instructions'>How to Play</a></p>
           <p><a className='misc-menu-btn' href='/about' >About</a></p>
-          <p><a className='misc-menu-btn'>Contact</a></p>    
+          <p><a className='misc-menu-btn' href='/contact'>Contact</a></p>    
         </div>
         <div className='misc-copyright-container'>
           <p className='misc-copyright-text'>
