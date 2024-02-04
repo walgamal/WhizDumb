@@ -1,7 +1,10 @@
 import React from 'react'
 import '../../ComponentsCSS/MiscCSS/MiscFooter.css'
+import { Route, useLocation, Link } from "react-router-dom";
 
 function MiscFooter() {
+  const location = useLocation();
+
   return (
     <div className='misc-footer-container'>
         <div className='misc-social-icons-container'>
@@ -10,14 +13,14 @@ function MiscFooter() {
           <img className='misc-facebook-icon' src='/assets/facebook-icon.svg' alt='facebook-icon' />
         </div>
         {/* TODO: Hide buttons for phone/tablets */}
-        <div className='misc-menu-btns-container'>   
-          <p><a className='misc-menu-btn'>How to Play</a></p>
-          <p><a className='misc-menu-btn' href='/about' >About</a></p>
-          <p><a className='misc-menu-btn'>Contact</a></p>    
+        <div className='misc-menu-btns-container'>
+          { location.pathname === '/instructions' ? <p><a className='misc-menu-btn-active' href='/instructions'>How to Play</a></p> : <p><a className='misc-menu-btn' href='/instructions'>How to Play</a></p> }
+          { location.pathname === '/about' ? <p><a className='misc-menu-btn-active' href='/about'>About</a></p> : <p><a className='misc-menu-btn' href='/about'>About</a></p> }
+          { location.pathname === '/contact' ? <p><a className='misc-menu-btn-active' href='/contact'>Contact</a></p> : <p><a className='misc-menu-btn' href='/contact'>Contact</a></p> }
         </div>
         <div className='misc-copyright-container'>
           <p className='misc-copyright-text'>
-            ©2023 WhizDumb
+            ©{new Date().getFullYear()} WhizDumb
           </p>
         </div>
     </div>

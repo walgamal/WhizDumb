@@ -1,16 +1,26 @@
 import React from 'react'
 import MiscHeader from '../Components/MiscComponents/MiscHeader'
 import MiscFooter from '../Components/MiscComponents/MiscFooter'
-import ContactInfoCard from '../Components/ContactPageComponents/ContactInfoCard'
-import ContactForm from '../Components/ContactPageComponents/ContactForm'
+import ContactCard from '../Components/ContactPageComponents/ContactCard'
+import MessageFormCard from '../Components/ContactPageComponents/MessageFormCard'
+import '../ComponentsCSS/ContactPageCSS/ContactPage.css' 
 
 function Contact() {
   return (
-    <> 
+    <>
       <MiscHeader />
-      <ContactInfoCard />
-      <ContactForm />
-      <MiscFooter/>
+      <div className='contact-page-card-container'>
+        <ContactCard 
+          title = 'Contact'
+          text = { `Let's Keep In Touch!` }
+          email = 'admin@WhizDumb.com'
+          phone = '(555) 444-6666'
+        />
+        <MessageFormCard 
+          title = 'Send Us a Message'
+        />
+      </div>
+      <MiscFooter />
     </>
   )
 }

@@ -11,13 +11,13 @@ function HomeFooter() {
         </div>
         {/* TODO: Hide buttons for phone/tablet */}
         <div className='menu-btns-container'>   
-          <p><a className='menu-btn'>How to Play</a></p>
+          <p><a className='menu-btn' href='/instructions'>How to Play</a></p>
           <p><a className='menu-btn' href='/about' >About</a></p>
           <p><a className='menu-btn' href='/contact'>Contact</a></p>    
         </div>
         <div className='copyright-container'>
           <p className='copyright-text'>
-            ©2023 WhizDumb
+            ©{new Date().getFullYear()} WhizDumb
           </p>
         </div>
     </div>

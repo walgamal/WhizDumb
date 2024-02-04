@@ -54,6 +54,20 @@
     line-height: normal;
     color: #C5C6C7;
     background-color: #00000000;
+    text-decoration: none;
+}
+
+.misc-menu-btn-active {
+    margin-inline: 15px;
+    text-align: center;
+    font-family: 'Goldman','Arial','Sans-Serif';
+    font-size: 2.45vh;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: #66FCF1;
+    background-color: #00000000;
+    text-decoration: none;
 }
 
 .misc-copyright-container {

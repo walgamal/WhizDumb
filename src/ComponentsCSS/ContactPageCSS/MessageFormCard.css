@@ -1,0 +1,147 @@
+html, body { 
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.message-card-hero {
+    height: 100%;
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background: #181D21;
+    margin-top: 0.5%;
+    padding-block:15vh;
+    overflow-y: auto;
+    z-index: 1;
+}
+
+.message-card {
+    min-height: 85%;
+    width: 66%;
+    position: relative;
+    display: flex;
+    margin-block: 5%;
+    margin-right: 15%;
+    flex-direction: column;
+    border-radius: 36px;
+    border: 5px solid #0B0C10;
+    background: rgba(31, 40, 51, 0.80);
+    box-shadow: 5px 5px 8px 6px rgba(0, 0, 0, 0.50);
+    z-index: 2;
+}
+
+.message-card-title {
+    height: 8%;
+    width: 100%;
+    text-align: center;
+    font-family: 'Goldman','Arial','Sans-Serif';
+    font-size: 4.5vh;
+    font-style: normal;
+    font-weight: 700;
+    margin-top: 3.3%;
+}
+
+.message-card-p {
+    width: 95%;
+    margin-inline: auto;
+    margin-top: 1.8%;
+    margin-bottom: 3.5%;
+    color: #FFF;
+    text-align: center;
+    font-size: 3.2vh;
+    font-family: 'Goldman','Arial','Sans-Serif';
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.message-card-hr {
+    width: 75%;
+    border: 1px solid rgb(132, 132, 132, 0.5);
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+.message-card-first-row-container {
+    display: flex;
+    padding-left: 12%;
+}
+
+.message-card-label-input-container {
+    margin-right: 8%;
+}
+
+.message-card-label {
+    height: 4%;
+    text-align: left;
+    font-family: 'Goldman','Arial','Sans-Serif';
+    font-size: 2.2vh;
+    font-style: normal;
+    font-weight: 700;
+    margin-top: 4%;
+    margin-left: 3%;
+}
+
+.message-card-input {
+    height: 65%;
+    width: 100%;
+    text-align: left;
+    font-family: 'Arial','Sans-Serif';
+    font-size: 1.6vh;
+    font-style: normal;
+    font-weight: 700;
+    margin-top: 1%;
+    padding-left: 5%;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: rgb(171, 168, 168, 0.25);
+}
+
+.message-card-textarea {
+    height: 20vh;
+    width: 100%;
+    text-align: left;
+    font-family: 'Arial','Sans-Serif';
+    font-size: 1.6vh;
+    font-style: normal;
+    font-weight: 700;
+    margin-top: 1%;
+    padding-left: 2%;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: rgb(171, 168, 168, 0.25);
+    resize: none;
+}
+
+.message-card-label-textarea-container {
+    position: relative;
+    margin-left: 12%;
+    margin-right: 17%;
+    margin-top: 5%;
+    margin-bottom: 3.5%;
+}
+
+.send-btn {
+    height: 5%;
+    width: 25.2%;
+    position: relative;
+    bottom: 8%; left: 50%;
+    transform: translate(-50%,0%);
+    font-family: 'Goldman','Arial','Sans-Serif';
+    font-size: 3vh;
+    font-weight: 700;
+    border-radius: 10px;
+    border: 2px solid #66FCF1;
+    margin-top: 1%;
+    margin-bottom: 3%;
+}
+
+.send-btn:hover {
+    border: 2px solid #000000;
+    background-color: #66FCF1;
+    color: black;
+    cursor: pointer;
+}
