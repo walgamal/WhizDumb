@@ -4,6 +4,7 @@ import '../../ComponentsCSS/HomePageCSS/HomeHeader.css'
 function Header() {
   return (
     <div className='header-container'>
+      <a href='/'>
         <div className='site-logo-container'>
           <img className='site-logo' src='/assets/site-logo.svg' alt='site-logo' />
           <h1 className='site-title'>WHIZDUMB</h1>
@@ -12,6 +13,7 @@ function Header() {
           <h1 className='menu-title'>MENU</h1>
           <img className='hamburger-menu-icon' src='/assets/hamburger-menu-icon.svg' alt='hamburger-menu-icon' />
         </div>
+      </a>
     </div>
   )
 }

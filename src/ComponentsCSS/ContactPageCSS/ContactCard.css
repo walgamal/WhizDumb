@@ -1,0 +1,66 @@
+html, body { 
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-card-hero {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background: #181D21;
+    padding-block:15vh;
+    overflow-y: auto;
+    z-index: 1;
+}
+
+.contact-card {
+    min-height: 100%;
+    width: 65%;
+    position: relative;
+    display: flex;
+    margin-block: 5%;
+    margin-top: 10%;
+    margin-left: 25%;
+    padding-block: 5%;
+    flex-direction: column;
+    border-radius: 36px;
+    border: 5px solid #0B0C10;
+    background: rgba(31, 40, 51, 0.80);
+    box-shadow: 5px 5px 8px 6px rgba(0, 0, 0, 0.50);
+    z-index: 2;
+}
+
+.contact-card-title {
+    height: 8%;
+    width: 100%;
+    text-align: center;
+    font-family: 'Goldman','Arial','Sans-Serif';
+    font-size: 4.5vh;
+    font-style: normal;
+    font-weight: 700;
+    margin-top: 3%;
+}
+
+.contact-card-p {
+    width: 95%;
+    margin-inline: auto;
+    margin-block: 5%;
+    color: #FFF;
+    text-align: center;
+    font-size: 3.2vh;
+    font-family: 'Goldman','Arial','Sans-Serif';
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.contact-card-hr {
+    width: 75%;
+    border: 1px solid rgb(132, 132, 132, 0.5);
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}

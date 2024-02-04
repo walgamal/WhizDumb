@@ -17,7 +17,7 @@ function HomeFooter() {
         </div>
         <div className='copyright-container'>
           <p className='copyright-text'>
-            ©2023 WhizDumb
+            ©{new Date().getFullYear()} WhizDumb
           </p>
         </div>
     </div>
