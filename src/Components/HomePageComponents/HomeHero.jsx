@@ -18,7 +18,7 @@ function HomeHero() {
                   ac. Viverra mauris in aliquam sem fringilla ut. Sed blandit libero volutpat sed cras ornare arcu dui.<br/> 
                   PUT INTRO HERE
               </p>
-              <Button className='start-btn btn' text='Start' />
+              <Button className='start-btn btn' text='Start' href='start/names' />
           </div>
       </div>
     </>

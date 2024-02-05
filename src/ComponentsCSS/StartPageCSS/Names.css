@@ -1,0 +1,45 @@
+.names-container {
+    background: rgba(31, 40, 51, 0.80);
+}
+
+.enter-names-table {
+    margin: auto;
+    border-spacing: 15vh;
+    padding-top: 5%;
+    padding-left: 3%;
+}
+
+.name-input {
+    width: 90%;
+    text-align: center;
+    font-family: 'Arial','Sans-Serif';
+    font-size: 4vh;
+    font-style: normal;
+    font-weight: 700;
+    margin-top: 1%;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: rgb(171, 168, 168, 0.25);
+}
+
+.continue-btn {
+    height: 11.8%;
+    width: 25.2%;
+    position: relative;
+    bottom: 8%; left: 50%;
+    transform: translate(-50%,0%);
+    font-family: 'Goldman','Arial','Sans-Serif';
+    font-size: 3.8vh;
+    font-weight: 700;
+    border-radius: 10px;
+    border: 4px solid #66FCF1;
+    margin-top: 1%;
+    margin-bottom: 10%;
+}
+
+.continue-btn:hover {
+    border: 4px solid #000000;
+    background-color: #66FCF1;
+    color: black;
+    cursor: pointer;
+}

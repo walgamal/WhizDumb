@@ -17,8 +17,6 @@
     font-size: 3.3vh;
 }
 
-.start-btn {
-    bottom: 8%; left: 50%;
-    transform: translate(-50%,0%);
-    font-size: 3.8vh;
+.btn-link {
+    background-color: transparent;
 }
