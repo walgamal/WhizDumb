@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from '../MiscComponents/Button'
-import '../../ComponentsCSS/StartPageCSS/Names.css'
 import NameInput from './NameInput'
+import '../../ComponentsCSS/StartPageCSS/Names.css'
 
 function Names() {
   return (
