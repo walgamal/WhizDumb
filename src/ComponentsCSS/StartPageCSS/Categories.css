@@ -1,0 +1,71 @@
+.categories-container {
+    background: rgba(31, 40, 51, 0.80);
+}
+
+.select-categories-table {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: -5%;
+    border-spacing: 15vh;
+    padding-top: 2.5%;
+}
+
+.category-select {
+    width: 100%;
+    padding: 1vh;
+    padding-left: 2vh;
+    text-align: left;
+    font-family: 'Arial','Sans-Serif';
+    font-size: 3.3vh;
+    font-style: normal;
+    font-weight: 700;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: rgb(171, 168, 168, 0.25);
+}
+
+.category-option {
+    color: black;
+    background-color: #ffffff;
+}
+
+.create-chart-btn {
+    height: 11.8%;
+    width: 25.2%;
+    position: relative;
+    bottom: 8%; left: 50%;
+    transform: translate(-50%,0%);
+    font-family: 'Goldman','Arial','Sans-Serif';
+    font-size: 3.8vh;
+    font-weight: 700;
+    border-radius: 10px;
+    border: 4px solid #66FCF1;
+    margin-top: 1%;
+    margin-bottom: 10%;
+}
+
+.back-btn {
+    width: 15%;
+    position: relative;
+    bottom: 8%; left: 50%;
+    transform: translate(-50%,0%);
+    font-family: 'Goldman','Arial','Sans-Serif';
+    font-size: 3.8vh;
+    font-weight: 700;
+    border-radius: 10px;
+    border: 4px solid #66FCF1;
+}
+
+.create-chart-btn:hover {
+    border: 4px solid #000000;
+    background-color: #66FCF1;
+    color: black;
+    cursor: pointer;
+}
+
+.back-btn:hover {
+    border: 4px solid #000000;
+    background-color: #66FCF1;
+    color: black;
+    cursor: pointer;
+}
