@@ -1,0 +1,12 @@
+.score-card {
+    width: 100%;
+    text-align: center;
+    padding: 1.3vh;
+    border: 3px solid #66FCF1;
+    border-radius: 10px;
+    background: rgba(31, 40, 51, 0.80);
+}
+
+.score {
+    font-size: 6vh;
+}

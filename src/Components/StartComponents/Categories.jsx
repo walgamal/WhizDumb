@@ -21,7 +21,7 @@ function Categories() {
                 <Button className='back-btn btn' text='Back' href='start/categories'/>
             </div>
             <div>
-                <Button className='create-chart-btn btn' text='Create Chart' href='start/categories'/>
+                <Button className='create-chart-btn btn' text='Create Chart' href='game'/>
             </div>
         </div>
     </>
