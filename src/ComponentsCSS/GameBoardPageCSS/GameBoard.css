@@ -1,0 +1,68 @@
+.game-board-container {
+    height: 69.4%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background: #161A1D;
+    padding-top:9vh;
+    overflow-y: auto;
+}
+
+.game-board {
+    min-height: 85%;
+    width: 73%;
+    position: relative;
+    display: flex;
+    margin-top: 3.5%;
+    margin-bottom: 1.6%;
+    padding: 1%;
+    flex-direction: column;
+    border-radius: 36px;
+    border: 3px solid #66FCF1;
+    background: rgba(31, 40, 51, 0.80);
+    box-shadow: 5px 5px 8px 6px rgba(0, 0, 0, 0.50);
+    font-family: 'Goldman','Arial','Sans-Serif';
+    font-size: 2.8vh;
+}
+
+.game-board-table {
+    margin: auto;
+    text-align: center;
+    table-layout: fixed;
+    width: 95%;
+    border: 2px solid #ABA8A8;
+    border-collapse: collapse;
+    border-style: hidden;
+}
+
+.game-board-headers {
+    font-family: 'Goldman','Arial','Sans-Serif';
+}
+
+th {
+    border: 2px solid #ABA8A8;
+    border-collapse: collapse;
+    padding: 1.3%;
+}
+
+.game-board-question-easy, .game-board-question-medium, .game-board-question-hard  {
+    border-left: 2px solid #ABA8A8;
+    font-size: 5vh;
+    padding: 0.5%;
+}
+
+.game-board-question-easy:hover  {
+    color: green;
+    cursor: pointer;
+}
+
+.game-board-question-medium:hover  {
+    color: orange;
+    cursor: pointer;
+}
+
+.game-board-question-hard:hover  {
+    color: red;
+    cursor: pointer;
+}

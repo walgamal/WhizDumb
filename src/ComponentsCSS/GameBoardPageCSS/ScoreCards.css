@@ -1,0 +1,30 @@
+.score-cards-container {
+    width: 100%;
+    background: #161A1D;
+    overflow-y: auto;
+}
+
+.score-cards {
+    width: 100%;
+    background-color: transparent;
+}
+
+.score-cards-table {
+    table-layout: fixed;
+    position: relative;
+    flex-direction: column;
+    border: none;
+    margin: auto;
+    background: transparent;
+    font-family: 'Goldman','Arial','Sans-Serif';
+}
+
+.score-cards-row {
+    background: transparent;
+    display: flex;
+}
+
+.score-card-wrapper {
+    margin-right: 2vh;
+    margin-left: 2vh;
+}

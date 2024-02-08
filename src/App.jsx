@@ -4,6 +4,7 @@ import About from './Pages/About.jsx'
 import Contact from './Pages/Contact.jsx'
 import Instructions from "./Pages/Instructions.jsx";
 import Start from "./Pages/Start.jsx";
+import GameBoardPage from "./Components/GameBoardComponents/GameBoardPage.jsx";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
         <Route path="/instructions" element={<Instructions />} />
         <Route path="/start/names" element={<Start />} />
         <Route path="/start/categories" element={<Start />} />
-        <Route path="/game" element={<GameBoard />} />
+        <Route path="/game" element={<GameBoardPage />} />
       </Routes>
     </Router>
   );
