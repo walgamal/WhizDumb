@@ -10,22 +10,22 @@ function ScoreCards() {
           <table className='score-cards-table'>
             <tr className='score-cards-row'>
               <td className='score-card-wrapper'>
-                <ScoreCard Name='Wasim' Score='0'/>
+                <ScoreCard Name='Player 1' Score='0'/>
               </td>
               <td className='score-card-wrapper'>
-                <ScoreCard Name='Rana' Score='0'/>
+                <ScoreCard Name='Player 2' Score='0'/>
               </td>
               <td className='score-card-wrapper'>
-                <ScoreCard Name='Reena' Score='0'/>
+                <ScoreCard Name='Player 3' Score='0'/>
               </td>
               <td className='score-card-wrapper'>
-                <ScoreCard Name='Ramia' Score='0'/>
+                <ScoreCard Name='Player 4' Score='0'/>
               </td>
               <td className='score-card-wrapper'>
-                <ScoreCard Name='Badr' Score='0'/>
+                <ScoreCard Name='Player 5' Score='0'/>
               </td>
               <td className='score-card-wrapper'>
-                <ScoreCard Name='Helal' Score='0'/>
+                <ScoreCard Name='Player 6' Score='0'/>
               </td>
             </tr>
           </table>
