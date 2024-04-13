@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 
-function NameInput() {
+const NameInput = forwardRef((props, ref) => {
   return (
     <>
         <input 
@@ -8,9 +8,10 @@ function NameInput() {
             onBlur={(e) => e.target.placeholder = "NAME"} 
             className='name-input' 
             placeholder='NAME' 
+            ref={ref}
         />
     </>
   )
-}
+})
 
 export default NameInput

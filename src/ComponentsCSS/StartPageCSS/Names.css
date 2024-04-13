@@ -1,5 +1,6 @@
 .names-container {
     background: rgba(31, 40, 51, 0.80);
+    height: 100vh;
 }
 
 .enter-names-table {
@@ -23,18 +24,16 @@
 }
 
 .continue-btn {
-    height: 11.8%;
-    width: 25.2%;
     position: relative;
-    bottom: 8%; left: 50%;
+    bottom: 0%; left: 44%;
     transform: translate(-50%,0%);
     font-family: 'Goldman','Arial','Sans-Serif';
     font-size: 3.8vh;
     font-weight: 700;
     border-radius: 10px;
     border: 4px solid #66FCF1;
-    margin-top: 1%;
-    margin-bottom: 10%;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 
 .continue-btn:hover {
