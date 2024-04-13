@@ -1,11 +1,16 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 import MiscHeader from '../MiscComponents/MiscHeader'
 import MiscFooter from '../MiscComponents/MiscFooter'
 import GameBoard from '../GameBoardComponents/GameBoard'
 import ScoreCards from './ScoreCards'
 import QuestionModal from './QuestionModal'
+import AppContext from '../../AppContext'
 
 function GameBoardPage() {
+  const { players } = useContext(AppContext);
+
+  console.log(players);
+
   const [openModal, setOpenModal] = useState(false);
   const [counter, setCounter] = useState(0);
 

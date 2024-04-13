@@ -4,6 +4,7 @@ import CategoryDropdown from './CategoryDropdown'
 import '../../ComponentsCSS/StartPageCSS/Categories.css'
 
 function Categories() {
+
   return (
     <>
         <div className='categories-container'>
@@ -18,7 +19,7 @@ function Categories() {
                 </tr>
             </table>
             <div>
-                <Button className='back-btn btn' text='Back' href='start/categories'/>
+                <Button className='back-btn btn' text='Back' href='' onClick={() => navigate(-1)} />
             </div>
             <div>
                 <Button className='create-chart-btn btn' text='Create Chart' href='game'/>
