@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 
 // categories to choose from
 /*
@@ -12,10 +12,10 @@ import React from 'react'
     Humanities & Arts (Books, Mythology & Art)
 */
 
-function CategoryDropdown() {
+const CategoryDropdown = forwardRef((props, ref) => {
   return (
     <>
-        <select className='category-select'>
+        <select className='category-select' ref={ref}>
             <option className='category-option' value="0">Any Category</option>
             <hr />
             <option className='category-option' value="1">General Knowledge</option>
@@ -34,6 +34,6 @@ function CategoryDropdown() {
         </select>
     </>
   )
-}
+}) 
 
 export default CategoryDropdown

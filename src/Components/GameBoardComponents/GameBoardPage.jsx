@@ -8,8 +8,10 @@ import AppContext from '../../AppContext'
 
 function GameBoardPage() {
   const { players } = useContext(AppContext);
+  const { categories } = useContext(AppContext);
 
-  console.log(players);
+  console.log("Players: " + JSON.stringify(players));
+  console.log("Categories: ", JSON.stringify(categories));
 
   const [openModal, setOpenModal] = useState(false);
   const [counter, setCounter] = useState(0);

@@ -13,7 +13,6 @@ const Names = () => {
     const player4Ref = useRef(undefined);
     const player5Ref = useRef(undefined);
     const player6Ref = useRef(undefined);
-    const players = [];    
 
     const retreivePlayers = () => {
         const player1 = player1Ref.current.value;
@@ -28,20 +27,23 @@ const Names = () => {
         setPlayersArray(players);
         console.log("Players are set to: " + players);
     }
+    
     return (
     <>
         <div className='names-container'>
             <table className='enter-names-table'>
-                <tr>
-                    <td><NameInput ref={player1Ref}/></td>
-                    <td><NameInput ref={player2Ref}/></td>
-                    <td><NameInput ref={player3Ref}/></td>
-                </tr>
-                <tr>
-                    <td><NameInput ref={player4Ref}/></td>
-                    <td><NameInput ref={player5Ref}/></td>
-                    <td><NameInput ref={player6Ref}/></td>
-                </tr>
+                <tbody>
+                    <tr>
+                        <td><NameInput ref={player1Ref}/></td>
+                        <td><NameInput ref={player2Ref}/></td>
+                        <td><NameInput ref={player3Ref}/></td>
+                    </tr>
+                    <tr>
+                        <td><NameInput ref={player4Ref}/></td>
+                        <td><NameInput ref={player5Ref}/></td>
+                        <td><NameInput ref={player6Ref}/></td>
+                    </tr>
+                </tbody>
             </table>
             <Button className='continue-btn btn' text='Continue' href='start/categories' onClick={retreivePlayers}/>
         </div>
