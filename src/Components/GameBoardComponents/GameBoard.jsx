@@ -9,47 +9,51 @@ function GameBoard(props) {
           <div className='game-board'>
               <table className='game-board-table'>
                 <thead className='game-board-headers'>
-                  <th>General Knowledge</th>
-                  <th>Random Category</th>
-                  <th>Random Category</th>
-                  <th>Random Category</th>
-                  <th>Random Category</th>
+                  <tr>
+                    <th>General Knowledge</th>
+                    <th>Random Category</th>
+                    <th>Random Category</th>
+                    <th>Random Category</th>
+                    <th>Random Category</th>
+                  </tr>
                 </thead>
-                <tr>
-                  <QuestionIcon difficulty='easy' handleClick={props.handleClick}/>
-                  <QuestionIcon difficulty='easy' handleClick={props.handleClick}/>
-                  <QuestionIcon difficulty='easy' handleClick={props.handleClick}/>
-                  <QuestionIcon difficulty='easy' handleClick={props.handleClick}/>
-                  <QuestionIcon difficulty='easy' handleClick={props.handleClick}/>                 
-                </tr>
-                <tr>
-                  <QuestionIcon difficulty='easy' handleClick={props.handleClick}/>
-                  <QuestionIcon difficulty='easy' handleClick={props.handleClick}/>
-                  <QuestionIcon difficulty='easy' handleClick={props.handleClick}/>
-                  <QuestionIcon difficulty='easy' handleClick={props.handleClick}/>
-                  <QuestionIcon difficulty='easy' handleClick={props.handleClick}/>                 
-                </tr>
-                <tr>
-                  <QuestionIcon difficulty='medium' handleClick={props.handleClick}/>
-                  <QuestionIcon difficulty='medium' handleClick={props.handleClick}/>
-                  <QuestionIcon difficulty='medium' handleClick={props.handleClick}/>
-                  <QuestionIcon difficulty='medium' handleClick={props.handleClick}/>
-                  <QuestionIcon difficulty='medium' handleClick={props.handleClick}/>
-                </tr>
-                <tr>
-                  <QuestionIcon difficulty='medium' handleClick={props.handleClick}/>
-                  <QuestionIcon difficulty='medium' handleClick={props.handleClick}/>
-                  <QuestionIcon difficulty='medium' handleClick={props.handleClick}/>
-                  <QuestionIcon difficulty='medium' handleClick={props.handleClick}/>
-                  <QuestionIcon difficulty='medium' handleClick={props.handleClick}/>
-                </tr>
-                <tr>
-                  <QuestionIcon difficulty='hard' handleClick={props.handleClick}/>
-                  <QuestionIcon difficulty='hard' handleClick={props.handleClick}/>
-                  <QuestionIcon difficulty='hard' handleClick={props.handleClick}/>
-                  <QuestionIcon difficulty='hard' handleClick={props.handleClick}/>
-                  <QuestionIcon difficulty='hard' handleClick={props.handleClick}/>
-                </tr>
+                <tbody>
+                  <tr>
+                    <QuestionIcon difficulty='easy' handleClick={props.handleClick}/>
+                    <QuestionIcon difficulty='easy' handleClick={props.handleClick}/>
+                    <QuestionIcon difficulty='easy' handleClick={props.handleClick}/>
+                    <QuestionIcon difficulty='easy' handleClick={props.handleClick}/>
+                    <QuestionIcon difficulty='easy' handleClick={props.handleClick}/>
+                  </tr>
+                  <tr>
+                    <QuestionIcon difficulty='easy' handleClick={props.handleClick}/>
+                    <QuestionIcon difficulty='easy' handleClick={props.handleClick}/>
+                    <QuestionIcon difficulty='easy' handleClick={props.handleClick}/>
+                    <QuestionIcon difficulty='easy' handleClick={props.handleClick}/>
+                    <QuestionIcon difficulty='easy' handleClick={props.handleClick}/>
+                  </tr>
+                  <tr>
+                    <QuestionIcon difficulty='medium' handleClick={props.handleClick}/>
+                    <QuestionIcon difficulty='medium' handleClick={props.handleClick}/>
+                    <QuestionIcon difficulty='medium' handleClick={props.handleClick}/>
+                    <QuestionIcon difficulty='medium' handleClick={props.handleClick}/>
+                    <QuestionIcon difficulty='medium' handleClick={props.handleClick}/>
+                  </tr>
+                  <tr>
+                    <QuestionIcon difficulty='medium' handleClick={props.handleClick}/>
+                    <QuestionIcon difficulty='medium' handleClick={props.handleClick}/>
+                    <QuestionIcon difficulty='medium' handleClick={props.handleClick}/>
+                    <QuestionIcon difficulty='medium' handleClick={props.handleClick}/>
+                    <QuestionIcon difficulty='medium' handleClick={props.handleClick}/>
+                  </tr>
+                  <tr>
+                    <QuestionIcon difficulty='hard' handleClick={props.handleClick}/>
+                    <QuestionIcon difficulty='hard' handleClick={props.handleClick}/>
+                    <QuestionIcon difficulty='hard' handleClick={props.handleClick}/>
+                    <QuestionIcon difficulty='hard' handleClick={props.handleClick}/>
+                    <QuestionIcon difficulty='hard' handleClick={props.handleClick}/>
+                  </tr>
+                </tbody>
               </table>
           </div>
       </div>

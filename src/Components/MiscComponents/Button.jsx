@@ -13,13 +13,6 @@ function Button(props) {
         <Link to={`/${props.href}`} className={`${props.className} btn`} type='button' onClick={handleClick}>
           {props.text}
         </Link>
-
-
-        {/* <a className='btn-link' href={`/${props.href}`}>
-          <button className={`${props.className} btn`} type='button' onClick={handleClick}> 
-              {props.text}
-          </button>
-        </a> */}
       </>
     )
   }
