@@ -20,7 +20,7 @@ const Categories = () => {
         const category3 = category3Ref.current.value;
         const category4 = category4Ref.current.value;
         
-        const categories = [category1, category2, category3, category4];
+        const categories = ["General Knowledge", category1, category2, category3, category4];
 
         setCategoriesArray(categories);
         console.log("Categories are set to: ", categories);

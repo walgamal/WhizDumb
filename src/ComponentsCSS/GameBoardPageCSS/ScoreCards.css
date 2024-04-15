@@ -6,7 +6,7 @@
 
 .score-cards {
     width: 100%;
-    background-color: transparent;
+    background-color: #161A1D;
 }
 
 .score-cards-table {
@@ -20,11 +20,12 @@
 }
 
 .score-cards-row {
-    background: transparent;
+    background: #161A1D;
     display: flex;
 }
 
 .score-card-wrapper {
+    background: #161A1D;
     margin-right: 2vh;
     margin-left: 2vh;
 }
