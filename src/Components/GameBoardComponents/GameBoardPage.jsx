@@ -30,8 +30,8 @@ function GameBoardPage() {
     <>
         <QuestionModal open={openModal} onClose={() =>{ console.log("...Modal closed"); setOpenModal(false)}} counter={counter} setCounter={setCounterToNum}/>
         <MiscHeader />
-        <GameBoard handleClick={handleClick}/>
-        <ScoreCards />
+        <GameBoard handleClick={handleClick} categories={categories} />
+        <ScoreCards players={players} />
         <MiscFooter />
     </>
   )
