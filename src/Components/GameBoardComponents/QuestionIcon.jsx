@@ -67,7 +67,7 @@ function QuestionIcon(props) {
         var allAnswersArray = [...data.results[0].incorrect_answers, data.results[0].correct_answer];
         allAnswersArray = scrambleAnswers(allAnswersArray);
 
-        setQuestionString(data.results[0].question);
+        setQuestionString(data.results[0].question.replace(/&quot;/g,'"').replace(/&#039;/g,'\''));
         setCorrectAnswerString(data.results[0].correct_answer);
         setAllAnswersArray(allAnswersArray);
         props.handleClick();

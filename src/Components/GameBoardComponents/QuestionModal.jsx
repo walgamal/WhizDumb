@@ -7,7 +7,6 @@ function QuestionModal(props) {
 
   console.log(" Question:", question,"\n", "Correct Answer:", correctAnswer, "\n", "All Answer:", allAnswers);
   
-
   useEffect(() => {
     let timer;
 
