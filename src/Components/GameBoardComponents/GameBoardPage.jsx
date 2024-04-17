@@ -10,9 +10,6 @@ function GameBoardPage() {
   const { players } = useContext(AppContext);
   const { categories } = useContext(AppContext);
 
-  console.log("Players: " + JSON.stringify(players));
-  console.log("Categories: ", JSON.stringify(categories));
-
   const [openModal, setOpenModal] = useState(false);
   const [counter, setCounter] = useState(0);
 
@@ -28,7 +25,11 @@ function GameBoardPage() {
 
   return (
     <>
-        <QuestionModal open={openModal} onClose={() =>{ console.log("...Modal closed"); setOpenModal(false)}} counter={counter} setCounter={setCounterToNum}/>
+        <QuestionModal 
+          open={openModal} 
+          onClose={() =>{ console.log("...Modal closed"); setOpenModal(false)}} 
+          counter={counter} 
+          setCounter={setCounterToNum}/>
         <MiscHeader />
         <GameBoard handleClick={handleClick} categories={categories} />
         <ScoreCards players={players} />

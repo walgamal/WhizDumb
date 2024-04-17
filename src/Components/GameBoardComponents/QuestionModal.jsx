@@ -1,16 +1,17 @@
-import { useEffect, React } from 'react'
+import { React, useEffect, useContext } from 'react'
 import './../../ComponentsCSS/GameBoardPageCSS/QuestionModal.css'
+import AppContext from '../../AppContext';
 
 function QuestionModal(props) {
+  const { question, correctAnswer, allAnswers} = useContext(AppContext);
+
+  console.log(" Question:", question,"\n", "Correct Answer:", correctAnswer, "\n", "All Answer:", allAnswers);
   
+
   useEffect(() => {
     let timer;
-    
-    console.log(props.open);
-    console.log("Counter: " + props.counter)
 
     if(props.counter > 0) {
-      console.log("decrement props.counter by 1");
       timer = setTimeout(() => props.setCounter(props.counter - 1), 1000);
     }
     
@@ -35,22 +36,22 @@ function QuestionModal(props) {
     <div className='modal-overlay'> 
       <div className='modal-container'>
         <h1 className='modal-title'>Title</h1>
-        <p className='modal-question'>Who is the chubbiest little munchkin in the sea??</p>
+        <p className='modal-question'>{question}</p>
         <div className='modal-button-container'>
           <div className='modal-top-buttons-container'>
             <div>
-              <button className='modal-option' onClick={props.onClose}>Rana Batata</button>
+              <button className='modal-option' onClick={props.onClose}>{allAnswers[0]}</button>
             </div>
             <div>
-              <button className='modal-option'>Chubbs</button>
+              <button className='modal-option'>{allAnswers[1]}</button>
             </div>
           </div>
           <div className='modal-bottom-buttons-container'>
             <div>
-              <button className='modal-option'>Hubbs</button>
+              <button className='modal-option'>{allAnswers[2]}</button>
             </div>
             <div>
-              <button className='modal-option'>Wasim Ice Cream</button>
+              <button className='modal-option'>{allAnswers[3]}</button>
             </div>
           </div>
         </div>
