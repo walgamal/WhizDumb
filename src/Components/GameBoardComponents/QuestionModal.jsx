@@ -3,7 +3,7 @@ import './../../ComponentsCSS/GameBoardPageCSS/QuestionModal.css'
 import AppContext from '../../AppContext';
 
 function QuestionModal(props) {
-  const { question, correctAnswer, allAnswers} = useContext(AppContext);
+  const { question, questionCategory, correctAnswer, allAnswers} = useContext(AppContext);
 
   console.log(" Question:", question,"\n", "Correct Answer:", correctAnswer, "\n", "All Answer:", allAnswers);
   
@@ -34,7 +34,7 @@ function QuestionModal(props) {
   return (
     <div className='modal-overlay'> 
       <div className='modal-container'>
-        <h1 className='modal-title'>Title</h1>
+        <h1 className='modal-title'>{questionCategory}</h1>
         <p className='modal-question'>{question}</p>
         <div className='modal-button-container'>
           <div className='modal-top-buttons-container'>

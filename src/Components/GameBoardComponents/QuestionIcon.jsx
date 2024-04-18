@@ -2,7 +2,7 @@ import React, {useContext} from 'react'
 import AppContext from '../../AppContext'
 
 function QuestionIcon(props) {
-  const { setQuestionString, setCorrectAnswerString, setAllAnswersArray } = useContext(AppContext);
+  const { setQuestionString, setQuestionCategoryString, setCorrectAnswerString, setAllAnswersArray } = useContext(AppContext);
   
   const randomNum = (arr) => {
     return arr[Math.floor(Math.random() * arr.length)];
@@ -14,6 +14,12 @@ function QuestionIcon(props) {
       [allAnswers[i], allAnswers[j]] = [allAnswers[j], allAnswers[i]];
       return allAnswers;
     }
+  }
+
+  function decodeString(string) {
+    const tempElement = document.createElement('div');
+    tempElement.innerHTML = string;
+    return tempElement.textContent || tempElement.innerText || "";
   }
   
   const SelectAPICatNum = (category) => {
@@ -65,9 +71,11 @@ function QuestionIcon(props) {
       .then(response => response.json())
       .then(data => {
         var allAnswersArray = [...data.results[0].incorrect_answers, data.results[0].correct_answer];
+        for(let i = 0; i < allAnswersArray.length; i++) {  allAnswersArray[i] = decodeString(allAnswersArray[i]); }
         allAnswersArray = scrambleAnswers(allAnswersArray);
 
-        setQuestionString(data.results[0].question.replace(/&quot;/g,'"').replace(/&#039;/g,'\''));
+        setQuestionString(decodeString(data.results[0].question));
+        setQuestionCategoryString(decodeString(props.category));
         setCorrectAnswerString(data.results[0].correct_answer);
         setAllAnswersArray(allAnswersArray);
         props.handleClick();

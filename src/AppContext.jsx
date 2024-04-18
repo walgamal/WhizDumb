@@ -7,6 +7,7 @@ export const AppProvider = ({ children }) => {
     const [categories, setCategories] = useState([]);
 
     const [question, setQuestion] = useState("");
+    const [questionCategory, setQuestionCategory] = useState("");
     const [correctAnswer, setCorrectAnswer] = useState("");
     const [allAnswers, setAllAnswers] = useState([]);
 
@@ -21,6 +22,10 @@ export const AppProvider = ({ children }) => {
     const setQuestionString = (string) => {
         setQuestion(string);
     }
+    
+    const setQuestionCategoryString = (string) => {
+        setQuestionCategory(string);
+    }
 
     const setCorrectAnswerString = (string) => {
         setCorrectAnswer(string);
@@ -34,6 +39,7 @@ export const AppProvider = ({ children }) => {
         <AppContext.Provider value={{ players, setPlayersArray, 
                                       categories, setCategoriesArray, 
                                       question, setQuestionString, 
+                                      questionCategory, setQuestionCategoryString, 
                                       correctAnswer, setCorrectAnswerString,
                                       allAnswers, setAllAnswersArray  }}>
             {children}
