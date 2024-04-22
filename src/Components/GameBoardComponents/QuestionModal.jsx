@@ -1,49 +1,62 @@
-import { React, useEffect, useContext, useState } from 'react'
-import './../../ComponentsCSS/GameBoardPageCSS/QuestionModal.css'
+import React, { useEffect, useContext, useState } from 'react';
+import './../../ComponentsCSS/GameBoardPageCSS/QuestionModal.css';
 import AppContext from '../../AppContext';
 
-function checkAnswer (selectedAnswer, correctAnswer, answerAttempts, setAnswerAttempts, scores, currentPlayer, players, setScoresArray, setCurrentPlayerToActivePlayer, props) {
+function checkAnswer(selectedAnswer, correctAnswer, answerAttempts, setAnswerAttempts, scores, currentPlayer, players, setScoresArray, setCurrentPlayerToActivePlayer, props, setClickedOptions) {
   console.log("Scores:", scores, "\n", "Current Player:", currentPlayer, "\n", "Players:", players);
-  
-  if(selectedAnswer == correctAnswer) {
+
+  if (selectedAnswer === correctAnswer) {
     scores[currentPlayer] += 1;
-    setScoresArray(scores);  
-    console.log("Player" + (currentPlayer+1) + " got it correct! They score a point!");
+    setScoresArray(scores);
+    console.log("Player" + (currentPlayer + 1) + " got it correct! They score a point!");
     setAnswerAttempts(0);
+    setClickedOptions(prevState => ({
+      ...prevState,
+      [selectedAnswer]: true
+    }));
     props.onClose();
-  }
-  else {
+  } else {
     setCurrentPlayerToActivePlayer(currentPlayer, false);
     props.setCounter(10);
     alert("WRONG! NEXT PLAYER TURN!");
     setAnswerAttempts(answerAttempts + 1);
   }
+  
+  setClickedOptions(prevState => ({
+    ...prevState,
+    [selectedAnswer]: true
+  }));
 }
 
 function QuestionModal(props) {
   const { players, currentPlayer, scores, question, questionCategory, correctAnswer, allAnswers } = useContext(AppContext);
   const { setScoresArray, setCurrentPlayerToActivePlayer } = useContext(AppContext);
-  
-  const [answerAttempts, setAnswerAttempts] = useState(0);
 
-  if(players.filter(player => player !== '').length < 3 ) {
+  const [answerAttempts, setAnswerAttempts] = useState(0);
+  const [clickedOptions, setClickedOptions] = useState({
+    [allAnswers[0]]: false,
+    [allAnswers[1]]: false,
+    [allAnswers[2]]: false,
+    [allAnswers[3]]: false
+  });
+
+  if (players.filter(player => player !== '').length < 3) {
     numAttemptsAllowed = 2;
-  }
-  else {
+  } else {
     var numAttemptsAllowed = 3;
   }
 
-  console.log(" Question:", question,"\n", "Correct Answer:", correctAnswer, "\n", "All Answer:", allAnswers, "Number of Attempts:", answerAttempts, "Num allowed:", numAttemptsAllowed);
-  
+  console.log(" Question:", question, "\n", "Correct Answer:", correctAnswer, "\n", "All Answer:", allAnswers, "Number of Attempts:", answerAttempts, "Num allowed:", numAttemptsAllowed);
+
   useEffect(() => {
     let timer;
 
-    if(props.counter > 0) {
+    if (props.counter > 0) {
       timer = setTimeout(() => props.setCounter(props.counter - 1), 1000);
     }
-    
+
     return () => {
-      if(timer) {
+      if (timer) {
         clearTimeout(timer);
       }
     };
@@ -57,9 +70,9 @@ function QuestionModal(props) {
     props.onClose();
   }
 
-  if(!props.open) return null;
+  if (!props.open) return null;
 
-  if(answerAttempts == numAttemptsAllowed) {
+  if (answerAttempts == numAttemptsAllowed) {
     console.log("Ran out of attempts to answer this question!");
     setAnswerAttempts(0);
     props.onClose();
@@ -67,27 +80,55 @@ function QuestionModal(props) {
 
   return (
     <>
-      <div className='modal-overlay'> 
+      <div className='modal-overlay'>
         <div className='modal-container'>
           <em className='current-player-indicator'>{players[currentPlayer]}</em>
           <h1 className='modal-title'>{questionCategory}</h1>
           <p className='modal-question'>{question}</p>
           <div className='modal-button-container'>
             <div className='modal-top-buttons-container'>
-              <div>
-                <button className='modal-option' onClick={() => checkAnswer(allAnswers[0], correctAnswer, answerAttempts, setAnswerAttempts, scores, currentPlayer, players, setScoresArray, setCurrentPlayerToActivePlayer, props)}>{allAnswers[0]}</button>
-              </div>
-              <div>
-                <button className='modal-option' onClick={() => checkAnswer(allAnswers[1], correctAnswer, answerAttempts, setAnswerAttempts, scores, currentPlayer, players, setScoresArray, setCurrentPlayerToActivePlayer, props)}>{allAnswers[1]}</button>
-              </div>
+              {!clickedOptions[allAnswers[0]] && (
+                <div>
+                  <button className='modal-option' onClick={() => checkAnswer(allAnswers[0], correctAnswer, answerAttempts, setAnswerAttempts, scores, currentPlayer, players, setScoresArray, setCurrentPlayerToActivePlayer, props, setClickedOptions)}>{allAnswers[0]}</button>
+                </div>
+              )}
+              {clickedOptions[allAnswers[0]] && (
+                <div>
+                  <button className='incorrect' >WRONG!</button>
+                </div>
+              )}
+              {!clickedOptions[allAnswers[1]] && (
+                <div>
+                  <button className='modal-option' onClick={() => checkAnswer(allAnswers[1], correctAnswer, answerAttempts, setAnswerAttempts, scores, currentPlayer, players, setScoresArray, setCurrentPlayerToActivePlayer, props, setClickedOptions)}>{allAnswers[1]}</button>
+                </div>
+              )}
+              {clickedOptions[allAnswers[1]] && (
+                <div>
+                  <button className='incorrect' >WRONG!</button>
+                </div>
+              )}
             </div>
             <div className='modal-bottom-buttons-container'>
-              <div>
-                <button className='modal-option' onClick={() => checkAnswer(allAnswers[2], correctAnswer, answerAttempts, setAnswerAttempts, scores, currentPlayer, players, setScoresArray, setCurrentPlayerToActivePlayer, props)}>{allAnswers[2]}</button>
-              </div>
-              <div>
-                <button className='modal-option' onClick={() => checkAnswer(allAnswers[3], correctAnswer, answerAttempts, setAnswerAttempts, scores, currentPlayer, players, setScoresArray, setCurrentPlayerToActivePlayer, props)}>{allAnswers[3]}</button>
-              </div>
+              {!clickedOptions[allAnswers[2]] && (
+                <div>
+                  <button className='modal-option' onClick={() => checkAnswer(allAnswers[2], correctAnswer, answerAttempts, setAnswerAttempts, scores, currentPlayer, players, setScoresArray, setCurrentPlayerToActivePlayer, props, setClickedOptions)}>{allAnswers[2]}</button>
+                </div>
+              )}
+              {clickedOptions[allAnswers[2]] && (
+                <div>
+                  <button className='incorrect' >WRONG!</button>
+                </div>
+              )}
+              {!clickedOptions[allAnswers[3]] && (
+                <div>
+                  <button className='modal-option' onClick={() => checkAnswer(allAnswers[3], correctAnswer, answerAttempts, setAnswerAttempts, scores, currentPlayer, players, setScoresArray, setCurrentPlayerToActivePlayer, props, setClickedOptions)}>{allAnswers[3]}</button>
+                </div>
+              )}
+              {clickedOptions[allAnswers[3]] && (
+                <div>
+                  <button className='incorrect' >WRONG!</button>
+                </div>
+              )}
             </div>
           </div>
 
@@ -99,4 +140,4 @@ function QuestionModal(props) {
   )
 }
 
-export default QuestionModal
+export default QuestionModal;

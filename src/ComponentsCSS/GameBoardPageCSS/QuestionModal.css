@@ -70,6 +70,18 @@
     cursor: pointer;
 }
 
+.incorrect {
+    width: 15vw;
+    height: 10vh;
+    margin: 15px;
+    border: 2px solid #CF1313;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    font-family: 'Goldman','Arial','Sans-Serif';
+    font-weight: 100;
+    font-size: 18px;
+}
+
 .modal-timer {
     font-family: 'Goldman','Arial','Sans-Serif';
     position: absolute;
