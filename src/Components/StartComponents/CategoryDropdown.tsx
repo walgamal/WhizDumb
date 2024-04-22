@@ -27,7 +27,7 @@ const CategoryDropdown = forwardRef((props, ref) => {
             <hr />
             <option className='category-option' value={Category.Sports}>Sports</option>
             <hr />
-            <option className='category-option' value={Category.GeneralKnowledge}>Geography</option>
+            <option className='category-option' value={Category.Geography}>Geography</option>
             <hr />
             <option className='category-option' value={Category.HistoryAndPolitics}>History & Politics</option>
             <hr />
