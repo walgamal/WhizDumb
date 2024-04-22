@@ -22,7 +22,9 @@ function GameBoard(props) {
                     <tr key={rowIndex}>
                       {props.categories.map((category, colIndex) => (
                         <QuestionIcon
-                          key={colIndex}
+                          key={colIndex} 
+                          col={colIndex}
+                          row={rowIndex}
                           category={category}
                           difficulty={difficulty}
                           handleClick={props.handleClick}

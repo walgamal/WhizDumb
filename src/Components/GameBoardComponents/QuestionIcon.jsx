@@ -2,7 +2,7 @@ import React, {useContext} from 'react'
 import AppContext from '../../AppContext'
 
 function QuestionIcon(props) {
-  const { setQuestionString, setQuestionCategoryString, setCorrectAnswerString, setAllAnswersArray } = useContext(AppContext);
+  const { setQuestionString, setQuestionCategoryString, setCorrectAnswerString, setAllAnswersArray, questionsAnswered, setQuestionsAnsweredArray } = useContext(AppContext);
   
   const randomNum = (arr) => {
     return arr[Math.floor(Math.random() * arr.length)];
@@ -65,6 +65,9 @@ function QuestionIcon(props) {
   }
 
   const handleClick = () => {
+    questionsAnswered[props.row][props.col] = true;
+    setQuestionsAnsweredArray(questionsAnswered);
+
     var APICategoryNum = SelectAPICatNum(props.category);
 
     fetch(`https://opentdb.com/api.php?amount=1&category=${APICategoryNum}&difficulty=${props.difficulty}&type=multiple`)
@@ -82,11 +85,20 @@ function QuestionIcon(props) {
       });
   }
 
-  return (
-    <>
-      <td className={`game-board-question-${props.difficulty}`} onClick={handleClick}>?</td>
-    </>
-  )
+  if(questionsAnswered[props.row][props.col]) {
+    return (
+      <>
+        <td className={`game-board-question-answered`}>?</td>
+      </>
+    )
+  }
+  else{
+    return (
+      <>
+        <td className={`game-board-question-${props.difficulty}`} onClick={handleClick}>?</td>
+      </>
+    )
+  }
 }
 
 export default QuestionIcon

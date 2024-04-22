@@ -10,6 +10,7 @@ export const AppProvider = ({ children }) => {
 
     const [question, setQuestion] = useState("");
     const [questionCategory, setQuestionCategory] = useState("");
+    const [questionsAnswered, setQuestionsAnswered] = useState([[0,0,0,0,0], [0,0,0,0,0], [0,0,0,0,0], [0,0,0,0,0], [0,0,0,0,0]]);
     const [correctAnswer, setCorrectAnswer] = useState("");
     const [allAnswers, setAllAnswers] = useState([]);
 
@@ -57,6 +58,10 @@ export const AppProvider = ({ children }) => {
         setQuestionCategory(string);
     }
 
+    const setQuestionsAnsweredArray = (array) => {   
+        setQuestionsAnswered(array);
+    } 
+
     const setCorrectAnswerString = (string) => {
         setCorrectAnswer(string);
     }
@@ -72,6 +77,7 @@ export const AppProvider = ({ children }) => {
                                       categories, setCategoriesArray, 
                                       question, setQuestionString, 
                                       questionCategory, setQuestionCategoryString, 
+                                      questionsAnswered, setQuestionsAnsweredArray,
                                       correctAnswer, setCorrectAnswerString,
                                       allAnswers, setAllAnswersArray  }}>
             {children}
