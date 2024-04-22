@@ -6,7 +6,7 @@ import AppContext from '../../AppContext';
 import '../../ComponentsCSS/StartPageCSS/Categories.css'
 
 const Categories = () => {
-    const { setCategoriesArray } = useContext(AppContext);
+    const { setCategoriesArray, setCurrentPlayerToActivePlayer } = useContext(AppContext);
     const navigate = useNavigate();
 
     const category1Ref = useRef(1);
@@ -24,6 +24,8 @@ const Categories = () => {
 
         setCategoriesArray(categories);
         console.log("Categories are set to: ", categories);
+
+        setCurrentPlayerToActivePlayer(0, true);
     }
     
   return (

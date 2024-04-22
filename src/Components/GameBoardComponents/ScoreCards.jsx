@@ -12,7 +12,7 @@ function ScoreCards(props) {
               <tr className='score-cards-row'>
                 {props.players.map((player, index) => (
                   player && <td key={index} className='score-card-wrapper'>
-                    <ScoreCard Name={player} Score='0'/>
+                    <ScoreCard Name={player} isCurrent={index === props.currentPlayer} Score={props.scores[index]}/>
                   </td>
                 ))}
               </tr>

@@ -8,6 +8,8 @@ import AppContext from '../../AppContext'
 
 function GameBoardPage() {
   const { players } = useContext(AppContext);
+  const { currentPlayer } = useContext(AppContext);
+  const { scores } = useContext(AppContext);
   const { categories } = useContext(AppContext);
 
   const [openModal, setOpenModal] = useState(false);
@@ -17,22 +19,29 @@ function GameBoardPage() {
     setCounter(num);
   }
 
-  const handleClick = () => {
+  const handleQuestionIconClick = () => {
     console.log("Modal opened...")
     setOpenModal(openModal => !openModal);
     setCounter(10);
   };
 
+  const handleClosingModal = () => {
+    console.log("...Modal closed"); 
+    setOpenModal(false)
+  }
+
   return (
     <>
         <QuestionModal 
           open={openModal} 
-          onClose={() =>{ console.log("...Modal closed"); setOpenModal(false)}} 
+          onClose={handleClosingModal} 
           counter={counter} 
-          setCounter={setCounterToNum}/>
+          setCounter={setCounterToNum}
+        />
+        
         <MiscHeader />
-        <GameBoard handleClick={handleClick} categories={categories} />
-        <ScoreCards players={players} />
+        <GameBoard handleClick={handleQuestionIconClick} categories={categories} />
+        <ScoreCards players={players} currentPlayer={currentPlayer} scores={scores}/>
         <MiscFooter />
     </>
   )

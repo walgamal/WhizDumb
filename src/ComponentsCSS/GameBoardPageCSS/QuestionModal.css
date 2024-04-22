@@ -20,6 +20,13 @@
     text-align: center;
 }
 
+.current-player-indicator {
+    font-family: 'Goldman','Arial','Sans-Serif';
+    position: absolute;
+    top: 3.3vh;
+    left: 2vw;
+}
+
 .modal-title {
     font-family: 'Goldman','Arial','Sans-Serif';
     font-weight: 100;

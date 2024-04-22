@@ -76,7 +76,7 @@ function QuestionIcon(props) {
 
         setQuestionString(decodeString(data.results[0].question));
         setQuestionCategoryString(decodeString(props.category));
-        setCorrectAnswerString(data.results[0].correct_answer);
+        setCorrectAnswerString(decodeString(data.results[0].correct_answer));
         setAllAnswersArray(allAnswersArray);
         props.handleClick();
       });
