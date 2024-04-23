@@ -81,6 +81,7 @@ function QuestionModal(props) {
   };
 
   const reset = props => {
+    setCurrentPlayerToActivePlayer(currentPlayer, false);
     props.onClose();
   }
 
