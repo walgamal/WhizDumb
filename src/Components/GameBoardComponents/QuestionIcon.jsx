@@ -2,7 +2,7 @@ import React, {useContext} from 'react'
 import AppContext from '../../AppContext'
 
 function QuestionIcon(props) {
-  const { setQuestionString, setQuestionCategoryString, setCorrectAnswerString, setAllAnswersArray, questionsAnswered, setQuestionsAnsweredArray } = useContext(AppContext);
+  const { setQuestionString, setQuestionCategoryString, setCorrectAnswerString, setAllAnswersArray, questionsAnswered, setQuestionsAnsweredArray, setQuestionDifficulty } = useContext(AppContext);
   
   const randomNum = (arr) => {
     return arr[Math.floor(Math.random() * arr.length)];
@@ -81,6 +81,7 @@ function QuestionIcon(props) {
         setQuestionCategoryString(decodeString(props.category));
         setCorrectAnswerString(decodeString(data.results[0].correct_answer));
         setAllAnswersArray(allAnswersArray);
+        setQuestionDifficulty(data.results[0].difficulty);
         props.handleClick();
       });
   }
