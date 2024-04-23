@@ -88,3 +88,12 @@
     top: 3.3vh;
     left: 39vw;
 }
+
+.notification {
+    font-family: 'Goldman','Arial','Sans-Serif';
+    font-weight: 100;
+    font-size: 18px;
+    word-spacing: 3px;
+    margin-block: 20px;
+    color: #CF1313;
+}
