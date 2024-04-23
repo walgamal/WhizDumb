@@ -13,7 +13,7 @@ function GameBoardPage() {
   const { categories } = useContext(AppContext);
 
   const [openModal, setOpenModal] = useState(false);
-  const [counter, setCounter] = useState(0);
+  const [counter, setCounter] = useState(-1);
 
   const setCounterToNum = (num) => {
     setCounter(num);
