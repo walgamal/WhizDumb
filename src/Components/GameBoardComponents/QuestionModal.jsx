@@ -118,6 +118,7 @@ function QuestionModal(props) {
 
   if (answerAttempts == numAttemptsAllowed) {
     console.log("Ran out of attempts to answer this question!");
+    props.setCounter(-1);
     setAnswerAttempts(0);
     props.onClose();
   }
