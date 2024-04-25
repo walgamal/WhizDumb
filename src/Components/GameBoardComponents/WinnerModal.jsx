@@ -6,7 +6,7 @@ function WinnerModal(props) {
     <>
       <div className='modal-overlay'>
         <div className='modal-container'>
-          <h1 className='modal-title'>You're The Whiz!</h1>
+          <h1 className='modal-title good'>You're The Whiz!</h1>
           <p className='modal-question'>Congratulations, {props.winner}! You won and scored {props.points} points.</p>
           <br />
           <p className='modal-question'>You have earned the right to call everyone else Dumb!</p>

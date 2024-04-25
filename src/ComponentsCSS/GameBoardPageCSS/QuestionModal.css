@@ -95,5 +95,12 @@
     font-size: 18px;
     word-spacing: 3px;
     margin-block: 20px;
+}
+
+.good {
+    color: #20AE08;
+}
+
+.bad {
     color: #CF1313;
 }
