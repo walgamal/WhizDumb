@@ -36,7 +36,7 @@ function checkAnswer(selectedAnswer, correctAnswer, answerAttempts, setAnswerAtt
     setShowNotification(true);
     setTimeout(() => {
       setShowNotification(false);
-    }, 2000);
+    }, 3000);
     
     props.setCounter(12);
     setAnswerAttempts(answerAttempts + 1);
@@ -78,7 +78,11 @@ function QuestionModal(props) {
     }
 
     if(props.counter === 0) {
-      notifyTimerRanOut(correctAnswer, setShowNotification, setNotificationMsg, props);
+      notifyTimerRanOut();
+    }
+
+    if (answerAttempts == numAttemptsAllowed) {
+      notifyAttemptsUsedUp();
     }
 
     return () => {
@@ -98,7 +102,23 @@ function QuestionModal(props) {
     setCurrentPlayerToActivePlayer(currentPlayer, false);
     setShowNotification(true);
     setAnswerAttempts(0);
+    props.setCounter(-1);
   
+    setTimeout(() => {
+      setShowNotification(false);
+      setNotificationMsg("Incorrect! ");
+      props.onClose();
+    }, 3000);
+  }
+
+  const notifyAttemptsUsedUp = () => {
+    console.log("Ran out of attempts to answer this question!");
+    setNotificationMsg("No more attempts! The correct answer was: " + correctAnswer + ". \n");
+    setCurrentPlayerToActivePlayer(currentPlayer, false);
+    setShowNotification(true);
+    setAnswerAttempts(0);
+    props.setCounter(-1);
+    
     setTimeout(() => {
       setShowNotification(false);
       setNotificationMsg("Incorrect! ");
@@ -115,13 +135,6 @@ function QuestionModal(props) {
   }
 
   if (!props.open) return null;
-
-  if (answerAttempts == numAttemptsAllowed) {
-    console.log("Ran out of attempts to answer this question!");
-    props.setCounter(-1);
-    setAnswerAttempts(0);
-    props.onClose();
-  }
 
   return (
     <>
