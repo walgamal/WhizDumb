@@ -9,7 +9,6 @@ function HomeFooter() {
           <img className='twitter-icon' src='/assets/twitter-icon.svg' alt='twitter-icon' />
           <img className='facebook-icon' src='/assets/facebook-icon.svg' alt='facebook-icon' />
         </div>
-        {/* TODO: Hide buttons for phone/tablet */}
         <div className='menu-btns-container'>   
           <p><a className='menu-btn' href='/instructions'>How to Play</a></p>
           <p><a className='menu-btn' href='/about' >About</a></p>

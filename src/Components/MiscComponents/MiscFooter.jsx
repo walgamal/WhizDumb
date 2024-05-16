@@ -12,7 +12,6 @@ function MiscFooter() {
           <img className='misc-twitter-icon' src='/assets/twitter-icon.svg' alt='twitter-icon' />
           <img className='misc-facebook-icon' src='/assets/facebook-icon.svg' alt='facebook-icon' />
         </div>
-        {/* TODO: Hide buttons for phone/tablets */}
         <div className='misc-menu-btns-container'>
           { location.pathname === '/instructions' ? <p><a className='misc-menu-btn-active' href='/instructions'>How to Play</a></p> : <p><a className='misc-menu-btn' href='/instructions'>How to Play</a></p> }
           { location.pathname === '/about' ? <p><a className='misc-menu-btn-active' href='/about'>About</a></p> : <p><a className='misc-menu-btn' href='/about'>About</a></p> }
