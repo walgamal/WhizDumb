@@ -1,0 +1,3 @@
+# WhizDumb
+
+WhizDumb is a React-powered trivia game that brings the excitement of multiplayer trivia challenges to your fingertips. Utilizing [Open Trivia Databases's Trivia API](https://opentdb.com/api_config.php) for dynamically sourced questions, players can engage in endless rounds of brain-teasing fun across various categories. Designed and developed from scratch, this project showcases my expertise in frontend development using React, along with proficiency in HTML, CSS, and UI/UX design principles. With its sleek interface implemented entirely with plain CSS, WhizDumb offers an immersive gaming experience for players of all levels.
